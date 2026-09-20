@@ -15,8 +15,6 @@ A C++ program that prices a European call option using Monte Carlo simulation, w
 2. Calculates the call payoff for each path: `max(S_T - K, 0)`.
 3. Averages the payoffs and discounts back to today: `price = exp(-r * T) * average payoff`.
 
-The pricing engine is written in C++ (`std::mt19937` generator, `std::normal_distribution`). The Streamlit app compiles it with `g++ -O3` and calls it as a subprocess, passing the inputs as command-line arguments.
-
 ## Inputs
 | Parameter | Meaning | Default in app |
 |---|---|---|
